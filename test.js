@@ -3,7 +3,7 @@ import http from "k6/http";
 
 
 export const options = {
-	duration: '30m',
+	duration: '3s',
 	vus: 1,
 	maxRedirects: 0,
 	// discardResponseBodies: true,
@@ -44,12 +44,30 @@ function randomExponential(rate) {
 	return -Math.log(U)/rate;
   }
 
+ export  function makeid(/*length = 5*/) {
+	var result = "";
+	var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	var charactersLength = characters.length;
+	result =
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength)) +
+		characters.charAt(Math.floor(Math.random() * charactersLength));
+	return result;
+}
+
+// https://bit.ly/
 
 export default function () {
-	const res = http.get(`${arr[Math.floor(Math.random()*24)]}`)
-	// console.log(res.body);
-	if(res.timings.duration !==0 )
-		console.log(Date.now(), res.timings.duration);
+	// const res = http.get(`${arr[Math.floor(Math.random()*24)]}`)
+	// const res = http.get(`https://bit.ly/${makeid()}`);
+	const res = http.get(`https://bit.ly/3N2gAfA}`);
+	console.log(res.body);
+	// if(res.timings.duration !==0 )
+	// 	console.log(Date.now(), res.timings.duration);
 	sleep(randomExponential(2));
 }
 
