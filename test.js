@@ -9,6 +9,32 @@ export const options = {
 	// discardResponseBodies: true,
 };
 
+export let arr= ['https://bit.ly/3CWpQNt',
+'https://bit.ly/3CSK22W',
+'https://bit.ly/3MV7rVT',
+'https://bit.ly/3KSnthy',
+'https://bit.ly/3CMPh46',
+'https://bit.ly/3qccXJQ',
+'https://bit.ly/3Iit8f7',
+'https://bit.ly/3KURfST',
+'https://bit.ly/3KMZCje',
+'https://bit.ly/3ieOTC4',
+'https://bit.ly/36tbAjf',
+'https://bit.ly/3Ikee8b',
+'https://bit.ly/3tro7Nf',
+'https://bit.ly/3KTFZG2',
+'https://bit.ly/3tgmPEn',
+'https://bit.ly/3ichhVl',
+'https://bit.ly/3u4uDID',
+'https://bit.ly/3CXfVY8',
+'https://bit.ly/360obdU',
+'https://bit.ly/3JlO31Y',
+'https://bit.ly/3u8a6mm',
+'https://bit.ly/3660wsr',
+'https://bit.ly/37wwkHb',
+'https://bit.ly/3qeI07X',
+'https://bit.ly/3N19nMv']
+
 function randomExponential(rate) {
 	// http://en.wikipedia.org/wiki/Exponential_distribution#Generating_exponential_variates
 	rate = rate || 1;
